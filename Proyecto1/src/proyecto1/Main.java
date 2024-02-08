@@ -8,13 +8,16 @@ package proyecto1;
  *
  * @author VicDellaSala
  */
+
+
+
 public class Main {
 
     /**
      * @param args the command line arguments
      */
+    public static InterfaceView interfaceView = new InterfaceView();
     public static void main(String[] args) {
-        // TODO code application logic here
     }
     
 }
