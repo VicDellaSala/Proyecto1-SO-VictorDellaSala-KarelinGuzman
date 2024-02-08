@@ -25,7 +25,6 @@ public class Main {
     static int durationStar = Integer.parseInt((String) initialDataStar.getSimulationDuration()) * 1000;
     static int deadlineStar = Integer.parseInt((String) initialDataStar.getDeadline());
 
-    // Employee amount
     static int scriptwriterNick = Integer.parseInt((String) initialDataNick.getScreenwriters());
     static int setDesignerNick = Integer.parseInt((String) initialDataNick.getStageDesigner());
     static int animatorNick = Integer.parseInt((String) initialDataNick.getAnimator());
@@ -58,9 +57,9 @@ public class Main {
             interfaceView.getProfitStar().setText(String.valueOf(StarChannel.getProfits() - StarChannel.getSalaryAccount()));
 
             interfaceView.getProjectFaults().setText(String.valueOf(Nickelodeon.getPmFaults()));
-            interfaceView.getProjectManagerDeduction().setText(String.valueOf(Nickelodeon.getPmDiscountedAmount()));
+            interfaceView.getProjectManagerDeductionNick().setText(String.valueOf(Nickelodeon.getPmDiscountedAmount()));
             interfaceView.getProjectFaultsStar1().setText(String.valueOf(StarChannel.getPmFaults()));
-            interfaceView.getProjectManagerDeductionStar().setText(String.valueOf(StarChannel.getPmDiscountedAmount()));
+            interfaceView.getProjectManagerDeductionStar1().setText(String.valueOf(StarChannel.getPmDiscountedAmount()));
 
             interfaceView.getSpriptStorageStar().setText(String.valueOf(StarChannel.getScriptwriterDrive().getResourse()) + "/25");
             interfaceView.getDubbingStorageStar().setText(String.valueOf(StarChannel.getDuberDrive().getResourse()) + "/35");

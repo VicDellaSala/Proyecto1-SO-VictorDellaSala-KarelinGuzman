@@ -27,6 +27,14 @@ public class InterfaceView extends javax.swing.JFrame {
         initDataStarChannel();
     }
 
+    public JLabel getProjectManagerDeductionNick() {
+        return projectManagerDeductionNick;
+    }
+
+    public void setProjectManagerDeductionNick(JLabel projectManagerDeductionNick) {
+        this.projectManagerDeductionNick = projectManagerDeductionNick;
+    }
+
     private void initDataNickelodeon() {
         simulationDuration.setText((String) Main.initialDataNick.getSimulationDuration());
         deadline.setText((String) Main.initialDataNick.getDeadline());
@@ -82,7 +90,7 @@ public class InterfaceView extends javax.swing.JFrame {
         Faltas = new javax.swing.JLabel();
         projectFaults = new javax.swing.JLabel();
         Descuento = new javax.swing.JLabel();
-        projectManagerDeductionStar = new javax.swing.JLabel();
+        projectManagerDeductionNick = new javax.swing.JLabel();
         DiasRestantes = new javax.swing.JLabel();
         deadlineCounter = new javax.swing.JLabel();
         Finanzas = new javax.swing.JLabel();
@@ -265,10 +273,10 @@ public class InterfaceView extends javax.swing.JFrame {
         Descuento.setText("Descuento");
         jPanel1.add(Descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 150, -1, -1));
 
-        projectManagerDeductionStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        projectManagerDeductionStar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        projectManagerDeductionStar.setText("0");
-        jPanel1.add(projectManagerDeductionStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, 210, -1));
+        projectManagerDeductionNick.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        projectManagerDeductionNick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        projectManagerDeductionNick.setText("0");
+        jPanel1.add(projectManagerDeductionNick, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, 210, -1));
 
         DiasRestantes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         DiasRestantes.setText("Días restantes:");
@@ -1375,11 +1383,11 @@ public class InterfaceView extends javax.swing.JFrame {
     }
 
     public JLabel getProjectManagerDeductionStar() {
-        return projectManagerDeductionStar;
+        return projectManagerDeductionNick;
     }
 
     public void setProjectManagerDeductionStar(JLabel projectManagerDeductionStar) {
-        this.projectManagerDeductionStar = projectManagerDeductionStar;
+        this.projectManagerDeductionNick = projectManagerDeductionStar;
     }
 
     public JLabel getProjectManagerDeductionStar1() {
@@ -1648,7 +1656,7 @@ public class InterfaceView extends javax.swing.JFrame {
     private javax.swing.JLabel projectFaults;
     private javax.swing.JLabel projectFaultsStar1;
     private javax.swing.JLabel projectManagerDeduction;
-    private javax.swing.JLabel projectManagerDeductionStar;
+    private javax.swing.JLabel projectManagerDeductionNick;
     private javax.swing.JLabel projectManagerDeductionStar1;
     private javax.swing.JLabel projectStatus;
     private javax.swing.JLabel projectStatusStar1;
