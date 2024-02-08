@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
+import static proyecto1.Main.dataHandler;
 
 /**
  *
@@ -22,9 +23,11 @@ public class InterfaceView extends javax.swing.JFrame {
     public InterfaceView() {
         initComponents();
         this.setVisible(true);
+        initDataNickelodeon();
+        initDataStarChannel();
     }
-    
-    private void enterConfigData() {
+
+    private void initDataNickelodeon() {
         simulationDuration.setText((String) Main.initialDataNick.getSimulationDuration());
         deadline.setText((String) Main.initialDataNick.getDeadline());
         screenwriters.setText((String) Main.initialDataNick.getScreenwriters());
@@ -35,7 +38,7 @@ public class InterfaceView extends javax.swing.JFrame {
         assemblers.setText((String) Main.initialDataNick.getAssemblers());
     }
 
-    private void enterConfigData1() {
+    private void initDataStarChannel() {
         simulationDuration1.setText((String) Main.initialDataStar.getSimulationDuration());
         deadline1.setText((String) Main.initialDataStar.getDeadline());
         screenwriters1.setText((String) Main.initialDataStar.getScreenwriters());
@@ -364,6 +367,11 @@ public class InterfaceView extends javax.swing.JFrame {
         jPanel1.add(assemblers, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 560, 71, -1));
 
         saveButton1.setText("Guardar");
+        saveButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(saveButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 560, -1, -1));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Timmy_Turner3.png"))); // NOI18N
@@ -564,6 +572,11 @@ public class InterfaceView extends javax.swing.JFrame {
         jPanel2.add(assemblers1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 560, 71, -1));
 
         saveButton2.setText("Guardar");
+        saveButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(saveButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 560, -1, -1));
 
         earningsStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -592,6 +605,30 @@ public class InterfaceView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void saveButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButton1ActionPerformed
+        InitialData newData = new InitialData(animator.getText(), assemblers.getText(),
+                deadline.getText(),
+                plotTwistScriptwriters.getText(), screenwriters.getText(), simulationDuration.getText(),
+                stageDesigner.getText(), voiceActors.getText());
+        InitialData newData1 = new InitialData(animator1.getText(), assemblers1.getText(),
+                deadline1.getText(),
+                plotTwistScriptwriters1.getText(), screenwriters1.getText(), simulationDuration1.getText(),
+                stageDesigner1.getText(), voiceActors1.getText());
+        dataHandler.WriteText(newData, newData1);        // TODO add your handling code here:
+    }//GEN-LAST:event_saveButton1ActionPerformed
+
+    private void saveButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButton2ActionPerformed
+        InitialData newData = new InitialData(animator.getText(), assemblers.getText(),
+                deadline.getText(),
+                plotTwistScriptwriters.getText(), screenwriters.getText(), simulationDuration.getText(),
+                stageDesigner.getText(), voiceActors.getText());
+        InitialData newData1 = new InitialData(animator1.getText(), assemblers1.getText(),
+                deadline1.getText(),
+                plotTwistScriptwriters1.getText(), screenwriters1.getText(), simulationDuration1.getText(),
+                stageDesigner1.getText(), voiceActors1.getText());
+        dataHandler.WriteText(newData, newData1);         // TODO add your handling code here:
+    }//GEN-LAST:event_saveButton2ActionPerformed
 
     public JLabel getAnimaciones() {
         return Animaciones;
