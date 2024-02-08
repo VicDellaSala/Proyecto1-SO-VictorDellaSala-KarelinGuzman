@@ -13,22 +13,20 @@ import java.util.logging.Logger;
  *
  * @author Victor Daniel
  */
-public class scriptwriter extends Thread {
+public class setDesigner extends Thread {
 
-    estudio estudio;
-    int salary = 20;
+    private estudio estudio;
     private int dayCicle;
+    int salary = 26;
 
-    public scriptwriter(estudio estudio) {
+    public setDesigner(estudio estudio) {
         this.estudio = estudio;
+        this.dayCicle = 0;
+
     }
 
     public int getEmployeeAmount() {
-        return estudio.getScriptwriterEmployeeAmount();
-    }
-
-    public void setEmployeeAmount(int employeeAmount) {
-        estudio.setScriptwriterEmployeeAmount(employeeAmount);
+        return estudio.getSetDesignerEmployeeAmount();
     }
 
     public int getDayDuration() {
@@ -54,51 +52,51 @@ public class scriptwriter extends Thread {
     public void addDailySalary() {
         setSalaryAccount(
                 getSalaryAccount() + salary * 24 * getEmployeeAmount());
-        // System.out.println("El equipo de " + getEmployeeAmount() + " guionistas" + "
-        // gana: " + salary*24*getEmployeeAmount()+"$");
+
     }
 
-    public drive getScriptwriterDrive() {
-        return estudio.getScriptwriterDrive();
+    public drive getSetDesignerDrive() {
+        return estudio.getSetDesignerDrive();
     }
 
     public void operate() {
         setDayCicle(getDayCicle() + 1);
         if (getDayCicle() >= 4) {
             try {
-
-                getScriptwriterSemaphore().acquire(); // wait
-                int addedAmount = getScriptwriterDrive().add(getEmployeeAmount()); 
-                System.out.println("drive de guionistas:" + getScriptwriterDrive().getResourse() + " guiones-------");
-                getScriptwriterSemaphore().release(); // wait
+                getSetDesignerSemaphore().acquire(); // wait
+                int addedAmount = getSetDesignerDrive().add(getEmployeeAmount()); 
+                                                                                 
+                                                                                
+                                                                                 
+                System.out
+                        .println("El drive de escenarios tiene " + getSetDesignerDrive().getResourse() + " escenarios");
+                getSetDesignerSemaphore().release(); // wait
                 setDayCicle(0);
 
             } catch (InterruptedException ex) {
-                Logger.getLogger(scriptwriter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(setDesigner.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
 
     @Override
     public void run() {
-
         while (true) {
 
             try {
-
                 operate();
                 sleep(estudio.getDayDuration());
                 addDailySalary();
-                estudio.setDaysGoneBy(estudio.getDaysGoneBy() + 1);
+               
 
             } catch (InterruptedException ex) {
-                Logger.getLogger(scriptwriter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(setDesigner.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
     }
 
-    public Semaphore getScriptwriterSemaphore() {
-        return estudio.getScriptwriterSemaphore();
+    public Semaphore getSetDesignerSemaphore() {
+        return estudio.getSetDesignerSemaphore();
     }
 }
