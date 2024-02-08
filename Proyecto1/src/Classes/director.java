@@ -8,6 +8,7 @@ import static java.lang.Thread.sleep;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import proyecto1.Main;
 
 /**
  *
@@ -74,10 +75,10 @@ public class director extends Thread {
                     setCheckingPM(false);
 
                   
-                    if (estudio == Main.CartoonNetwork) {
-                        Main.gui.getDirectorStatus().setText("Administrando");
+                    if (estudio == Main.Nickelodeon) {
+                        Main.interfaceView.getDirectorStatus().setText("Administrando");
                     } else {
-                        Main.gui.getDirectorStatusStar().setText("Administrando");
+                        Main.interfaceView.getDirectorStatusStar1().setText("Administrando");
                     }
 
                     sleep(hour);
@@ -91,10 +92,10 @@ public class director extends Thread {
                 setCheckingPM(true);
 
                 
-                if (estudio == Main.CartoonNetwork) {
-                    Main.gui.getDirectorStatus().setText("Supervisando PM");
+                if (estudio == Main.Nickelodeon) {
+                    Main.interfaceView.getDirectorStatus().setText("Supervisando PM");
                 } else {
-                    Main.gui.getDirectorStatusStar().setText("Supervisando PM");
+                    Main.interfaceView.getDirectorStatusStar1().setText("Supervisando PM");
                 }
 
                 try {
@@ -115,10 +116,10 @@ public class director extends Thread {
                 try {
                     setCheckingPM(false);
 
-                    if (estudio == Main.CartoonNetwork) {
-                        Main.gui.getDirectorStatus().setText("Administrando");
+                    if (estudio == Main.Nickelodeon) {
+                        Main.interfaceView.getDirectorStatus().setText("Administrando");
                     } else {
-                        Main.gui.getDirectorStatusStar().setText("Administrando");
+                        Main.interfaceView.getDirectorStatusStar1().setText("Administrando");
                     }
 
                     sleep(halfHour);

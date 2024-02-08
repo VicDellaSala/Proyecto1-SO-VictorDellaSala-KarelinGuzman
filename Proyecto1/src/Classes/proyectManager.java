@@ -7,6 +7,7 @@ package Classes;
 import static java.lang.Thread.sleep;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import proyecto1.Main;
 
 /**
  *
@@ -43,8 +44,8 @@ public class proyectManager extends Thread {
                 setWatchingAnime(true);
 
                
-                Main.gui.getProjectManagerStatus().setText("Anime");
-                Main.gui.getProjectManagerStatusStar().setText("Anime");
+                Main.interfaceView.getProjectStatus().setText("Anime");
+                Main.interfaceView.getProjectStatusStar1().setText("Anime");
 
                ;
                 sleep(halfHour);
@@ -52,8 +53,8 @@ public class proyectManager extends Thread {
                 setWatchingAnime(false);
 
                
-                Main.gui.getProjectManagerStatus().setText("Trabajando");
-                Main.gui.getProjectManagerStatusStar().setText("Trabajando");
+                Main.interfaceView.getProjectStatus().setText("Trabajando");
+                Main.interfaceView.getProjectStatusStar1().setText("Trabajando");
 
                 
                 sleep(halfHour);
@@ -66,8 +67,8 @@ public class proyectManager extends Thread {
         setWatchingAnime(false);
 
        
-        Main.gui.getProjectManagerStatus().setText("Trabajando");
-        Main.gui.getProjectManagerStatusStar().setText("Trabajando");
+        Main.interfaceView.getProjectStatus().setText("Trabajando");
+        Main.interfaceView.getProjectStatusStar1().setText("Trabajando");
 
         while (hourlyCycle < 24) {
             try {

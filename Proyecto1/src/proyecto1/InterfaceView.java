@@ -4,6 +4,12 @@
  */
 package proyecto1;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author VicDellaSala
@@ -15,6 +21,29 @@ public class InterfaceView extends javax.swing.JFrame {
      */
     public InterfaceView() {
         initComponents();
+        this.setVisible(true);
+    }
+    
+    private void enterConfigData() {
+        simulationDuration.setText((String) Main.initialDataNick.getSimulationDuration());
+        deadline.setText((String) Main.initialDataNick.getDeadline());
+        screenwriters.setText((String) Main.initialDataNick.getScreenwriters());
+        stageDesigner.setText((String) Main.initialDataNick.getStageDesigner());
+        animator.setText((String) Main.initialDataNick.getAnimator());
+        voiceActors.setText((String) Main.initialDataNick.getVoiceActors());
+        plotTwistScriptwriters.setText((String) Main.initialDataNick.getPlotTwistScriptwriters());
+        assemblers.setText((String) Main.initialDataNick.getAssemblers());
+    }
+
+    private void enterConfigData1() {
+        simulationDuration1.setText((String) Main.initialDataStar.getSimulationDuration());
+        deadline1.setText((String) Main.initialDataStar.getDeadline());
+        screenwriters1.setText((String) Main.initialDataStar.getScreenwriters());
+        stageDesigner1.setText((String) Main.initialDataStar.getStageDesigner());
+        animator1.setText((String) Main.initialDataStar.getAnimator());
+        voiceActors1.setText((String) Main.initialDataStar.getVoiceActors());
+        plotTwistScriptwriters1.setText((String) Main.initialDataStar.getPlotTwistScriptwriters());
+        assemblers1.setText((String) Main.initialDataStar.getAssemblers());
     }
 
     /**
@@ -40,19 +69,19 @@ public class InterfaceView extends javax.swing.JFrame {
         ParaEntregar = new javax.swing.JLabel();
         Estandar = new javax.swing.JLabel();
         Plot = new javax.swing.JLabel();
-        standardStar = new javax.swing.JLabel();
-        plottwistStar = new javax.swing.JLabel();
+        standard = new javax.swing.JLabel();
+        plottwist = new javax.swing.JLabel();
         Supervision = new javax.swing.JLabel();
         Project = new javax.swing.JLabel();
-        projectStatusStar = new javax.swing.JLabel();
+        projectStatus = new javax.swing.JLabel();
         Director = new javax.swing.JLabel();
-        directorStatusStar = new javax.swing.JLabel();
+        directorStatus = new javax.swing.JLabel();
         Faltas = new javax.swing.JLabel();
-        projectFaultsStar = new javax.swing.JLabel();
+        projectFaults = new javax.swing.JLabel();
         Descuento = new javax.swing.JLabel();
         projectManagerDeductionStar = new javax.swing.JLabel();
         DiasRestantes = new javax.swing.JLabel();
-        deadlineCounterStar = new javax.swing.JLabel();
+        deadlineCounter = new javax.swing.JLabel();
         Finanzas = new javax.swing.JLabel();
         plotStorage = new javax.swing.JLabel();
         spriptStorage = new javax.swing.JLabel();
@@ -81,7 +110,7 @@ public class InterfaceView extends javax.swing.JFrame {
         assemblers = new javax.swing.JTextField();
         saveButton1 = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
+        projectManagerDeduction = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Ganancias1 = new javax.swing.JLabel();
         Costos1 = new javax.swing.JLabel();
@@ -109,13 +138,13 @@ public class InterfaceView extends javax.swing.JFrame {
         DiasRestantes1 = new javax.swing.JLabel();
         deadlineCounterStar1 = new javax.swing.JLabel();
         Finanzas1 = new javax.swing.JLabel();
-        plotStorage1 = new javax.swing.JLabel();
-        spriptStorage1 = new javax.swing.JLabel();
-        designerStorage1 = new javax.swing.JLabel();
-        animatorStorage1 = new javax.swing.JLabel();
-        dubbingStorage1 = new javax.swing.JLabel();
-        profit1 = new javax.swing.JLabel();
-        earnings1 = new javax.swing.JLabel();
+        plotStorageStar = new javax.swing.JLabel();
+        spriptStorageStar = new javax.swing.JLabel();
+        designerStorageStar = new javax.swing.JLabel();
+        animatorStorageStar = new javax.swing.JLabel();
+        dubbingStorageStar = new javax.swing.JLabel();
+        profitStar = new javax.swing.JLabel();
+        costsStar = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         simulationDuration1 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
@@ -134,6 +163,7 @@ public class InterfaceView extends javax.swing.JFrame {
         plotTwistScriptwriters1 = new javax.swing.JTextField();
         assemblers1 = new javax.swing.JTextField();
         saveButton2 = new javax.swing.JButton();
+        earningsStar = new javax.swing.JLabel();
         SimpsonsText = new javax.swing.JLabel();
         MargeSimpson = new javax.swing.JLabel();
 
@@ -190,14 +220,14 @@ public class InterfaceView extends javax.swing.JFrame {
         Plot.setText("PlotTwist:");
         jPanel1.add(Plot, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, -1, -1));
 
-        standardStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        standardStar.setText("0");
-        standardStar.setToolTipText("");
-        jPanel1.add(standardStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 480, 70, -1));
+        standard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        standard.setText("0");
+        standard.setToolTipText("");
+        jPanel1.add(standard, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 480, 70, -1));
 
-        plottwistStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        plottwistStar.setText("0");
-        jPanel1.add(plottwistStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 70, -1));
+        plottwist.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        plottwist.setText("0");
+        jPanel1.add(plottwist, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 70, -1));
 
         Supervision.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Supervision.setText("Supervisión");
@@ -207,26 +237,26 @@ public class InterfaceView extends javax.swing.JFrame {
         Project.setText("Project Manager:");
         jPanel1.add(Project, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, -1, -1));
 
-        projectStatusStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        projectStatusStar.setText("status");
-        jPanel1.add(projectStatusStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 80, -1, -1));
+        projectStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        projectStatus.setText("status");
+        jPanel1.add(projectStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 80, -1, -1));
 
         Director.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Director.setText("Director:");
         jPanel1.add(Director, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, -1, -1));
 
-        directorStatusStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        directorStatusStar.setText("status");
-        jPanel1.add(directorStatusStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 110, -1, -1));
+        directorStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        directorStatus.setText("status");
+        jPanel1.add(directorStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 110, -1, -1));
 
         Faltas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Faltas.setText("Faltas");
         jPanel1.add(Faltas, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, -1, -1));
 
-        projectFaultsStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        projectFaultsStar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        projectFaultsStar.setText("0");
-        jPanel1.add(projectFaultsStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 70, -1));
+        projectFaults.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        projectFaults.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        projectFaults.setText("0");
+        jPanel1.add(projectFaults, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 70, -1));
 
         Descuento.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Descuento.setText("Descuento");
@@ -241,9 +271,9 @@ public class InterfaceView extends javax.swing.JFrame {
         DiasRestantes.setText("Días restantes:");
         jPanel1.add(DiasRestantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, -1));
 
-        deadlineCounterStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        deadlineCounterStar.setText("0");
-        jPanel1.add(deadlineCounterStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 60, -1));
+        deadlineCounter.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        deadlineCounter.setText("0");
+        jPanel1.add(deadlineCounter, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 60, -1));
 
         Finanzas.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         Finanzas.setText("Nickelodeon");
@@ -339,8 +369,8 @@ public class InterfaceView extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Timmy_Turner3.png"))); // NOI18N
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/nickpng.png"))); // NOI18N
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -320, 1180, 950));
+        projectManagerDeduction.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/nickpng.png"))); // NOI18N
+        jPanel1.add(projectManagerDeduction, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -320, 1180, 950));
 
         jTabbedPane1.addTab("Nickelodeon", jPanel1);
 
@@ -454,40 +484,40 @@ public class InterfaceView extends javax.swing.JFrame {
         Finanzas1.setText("Star Channel");
         jPanel2.add(Finanzas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
-        plotStorage1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        plotStorage1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        plotStorage1.setText("/10");
-        jPanel2.add(plotStorage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 90, -1));
+        plotStorageStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        plotStorageStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        plotStorageStar.setText("/10");
+        jPanel2.add(plotStorageStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 90, -1));
 
-        spriptStorage1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        spriptStorage1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        spriptStorage1.setText("/25");
-        jPanel2.add(spriptStorage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 90, -1));
+        spriptStorageStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        spriptStorageStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        spriptStorageStar.setText("/25");
+        jPanel2.add(spriptStorageStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 90, -1));
 
-        designerStorage1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        designerStorage1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        designerStorage1.setText("/20");
-        jPanel2.add(designerStorage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 90, -1));
+        designerStorageStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        designerStorageStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        designerStorageStar.setText("/20");
+        jPanel2.add(designerStorageStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 90, -1));
 
-        animatorStorage1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        animatorStorage1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        animatorStorage1.setText("/55");
-        jPanel2.add(animatorStorage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 90, -1));
+        animatorStorageStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        animatorStorageStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        animatorStorageStar.setText("/55");
+        jPanel2.add(animatorStorageStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 90, -1));
 
-        dubbingStorage1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        dubbingStorage1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        dubbingStorage1.setText("/35");
-        jPanel2.add(dubbingStorage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 90, -1));
+        dubbingStorageStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        dubbingStorageStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        dubbingStorageStar.setText("/35");
+        jPanel2.add(dubbingStorageStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 90, -1));
 
-        profit1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        profit1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        profit1.setText("0");
-        jPanel2.add(profit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 240, -1));
+        profitStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        profitStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        profitStar.setText("0");
+        jPanel2.add(profitStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 240, -1));
 
-        earnings1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        earnings1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        earnings1.setText("0");
-        jPanel2.add(earnings1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 250, -1));
+        costsStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        costsStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        costsStar.setText("0");
+        jPanel2.add(costsStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 250, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setText("Duración de un día (segundos)");
@@ -536,6 +566,11 @@ public class InterfaceView extends javax.swing.JFrame {
         saveButton2.setText("Guardar");
         jPanel2.add(saveButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 560, -1, -1));
 
+        earningsStar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        earningsStar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        earningsStar.setText("0");
+        jPanel2.add(earningsStar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 250, -1));
+
         SimpsonsText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image1.png"))); // NOI18N
         jPanel2.add(SimpsonsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, -1, -1));
 
@@ -557,6 +592,894 @@ public class InterfaceView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JLabel getAnimaciones() {
+        return Animaciones;
+    }
+
+    public void setAnimaciones(JLabel Animaciones) {
+        this.Animaciones = Animaciones;
+    }
+
+    public JLabel getAnimaciones1() {
+        return Animaciones1;
+    }
+
+    public void setAnimaciones1(JLabel Animaciones1) {
+        this.Animaciones1 = Animaciones1;
+    }
+
+    public JLabel getCostos() {
+        return Costos;
+    }
+
+    public void setCostos(JLabel Costos) {
+        this.Costos = Costos;
+    }
+
+    public JLabel getCostos1() {
+        return Costos1;
+    }
+
+    public void setCostos1(JLabel Costos1) {
+        this.Costos1 = Costos1;
+    }
+
+    public JLabel getDescuento() {
+        return Descuento;
+    }
+
+    public void setDescuento(JLabel Descuento) {
+        this.Descuento = Descuento;
+    }
+
+    public JLabel getDescuento1() {
+        return Descuento1;
+    }
+
+    public void setDescuento1(JLabel Descuento1) {
+        this.Descuento1 = Descuento1;
+    }
+
+    public JLabel getDiasRestantes() {
+        return DiasRestantes;
+    }
+
+    public void setDiasRestantes(JLabel DiasRestantes) {
+        this.DiasRestantes = DiasRestantes;
+    }
+
+    public JLabel getDiasRestantes1() {
+        return DiasRestantes1;
+    }
+
+    public void setDiasRestantes1(JLabel DiasRestantes1) {
+        this.DiasRestantes1 = DiasRestantes1;
+    }
+
+    public JLabel getDirector() {
+        return Director;
+    }
+
+    public void setDirector(JLabel Director) {
+        this.Director = Director;
+    }
+
+    public JLabel getDirector1() {
+        return Director1;
+    }
+
+    public void setDirector1(JLabel Director1) {
+        this.Director1 = Director1;
+    }
+
+    public JLabel getDoblajes() {
+        return Doblajes;
+    }
+
+    public void setDoblajes(JLabel Doblajes) {
+        this.Doblajes = Doblajes;
+    }
+
+    public JLabel getDoblajes1() {
+        return Doblajes1;
+    }
+
+    public void setDoblajes1(JLabel Doblajes1) {
+        this.Doblajes1 = Doblajes1;
+    }
+
+    public JLabel getDrive() {
+        return Drive;
+    }
+
+    public void setDrive(JLabel Drive) {
+        this.Drive = Drive;
+    }
+
+    public JLabel getDrive1() {
+        return Drive1;
+    }
+
+    public void setDrive1(JLabel Drive1) {
+        this.Drive1 = Drive1;
+    }
+
+    public JLabel getEscenarios() {
+        return Escenarios;
+    }
+
+    public void setEscenarios(JLabel Escenarios) {
+        this.Escenarios = Escenarios;
+    }
+
+    public JLabel getEscenarios1() {
+        return Escenarios1;
+    }
+
+    public void setEscenarios1(JLabel Escenarios1) {
+        this.Escenarios1 = Escenarios1;
+    }
+
+    public JLabel getEstandar() {
+        return Estandar;
+    }
+
+    public void setEstandar(JLabel Estandar) {
+        this.Estandar = Estandar;
+    }
+
+    public JLabel getEstandar1() {
+        return Estandar1;
+    }
+
+    public void setEstandar1(JLabel Estandar1) {
+        this.Estandar1 = Estandar1;
+    }
+
+    public JLabel getFaltas() {
+        return Faltas;
+    }
+
+    public void setFaltas(JLabel Faltas) {
+        this.Faltas = Faltas;
+    }
+
+    public JLabel getFaltas1() {
+        return Faltas1;
+    }
+
+    public void setFaltas1(JLabel Faltas1) {
+        this.Faltas1 = Faltas1;
+    }
+
+    public JLabel getFinanzas() {
+        return Finanzas;
+    }
+
+    public void setFinanzas(JLabel Finanzas) {
+        this.Finanzas = Finanzas;
+    }
+
+    public JLabel getFinanzas1() {
+        return Finanzas1;
+    }
+
+    public void setFinanzas1(JLabel Finanzas1) {
+        this.Finanzas1 = Finanzas1;
+    }
+
+    public JLabel getGanancias() {
+        return Ganancias;
+    }
+
+    public void setGanancias(JLabel Ganancias) {
+        this.Ganancias = Ganancias;
+    }
+
+    public JLabel getGanancias1() {
+        return Ganancias1;
+    }
+
+    public void setGanancias1(JLabel Ganancias1) {
+        this.Ganancias1 = Ganancias1;
+    }
+
+    public JLabel getGiones() {
+        return Giones;
+    }
+
+    public void setGiones(JLabel Giones) {
+        this.Giones = Giones;
+    }
+
+    public JLabel getGiones1() {
+        return Giones1;
+    }
+
+    public void setGiones1(JLabel Giones1) {
+        this.Giones1 = Giones1;
+    }
+
+    public JLabel getMargeSimpson() {
+        return MargeSimpson;
+    }
+
+    public void setMargeSimpson(JLabel MargeSimpson) {
+        this.MargeSimpson = MargeSimpson;
+    }
+
+    public JLabel getParaEntregar() {
+        return ParaEntregar;
+    }
+
+    public void setParaEntregar(JLabel ParaEntregar) {
+        this.ParaEntregar = ParaEntregar;
+    }
+
+    public JLabel getParaEntregar1() {
+        return ParaEntregar1;
+    }
+
+    public void setParaEntregar1(JLabel ParaEntregar1) {
+        this.ParaEntregar1 = ParaEntregar1;
+    }
+
+    public JLabel getPlot() {
+        return Plot;
+    }
+
+    public void setPlot(JLabel Plot) {
+        this.Plot = Plot;
+    }
+
+    public JLabel getPlot1() {
+        return Plot1;
+    }
+
+    public void setPlot1(JLabel Plot1) {
+        this.Plot1 = Plot1;
+    }
+
+    public JLabel getPlotTwist() {
+        return PlotTwist;
+    }
+
+    public void setPlotTwist(JLabel PlotTwist) {
+        this.PlotTwist = PlotTwist;
+    }
+
+    public JLabel getPlotTwist1() {
+        return PlotTwist1;
+    }
+
+    public void setPlotTwist1(JLabel PlotTwist1) {
+        this.PlotTwist1 = PlotTwist1;
+    }
+
+    public JLabel getProject() {
+        return Project;
+    }
+
+    public void setProject(JLabel Project) {
+        this.Project = Project;
+    }
+
+    public JLabel getProject1() {
+        return Project1;
+    }
+
+    public void setProject1(JLabel Project1) {
+        this.Project1 = Project1;
+    }
+
+    public JLabel getSimpsonsText() {
+        return SimpsonsText;
+    }
+
+    public void setSimpsonsText(JLabel SimpsonsText) {
+        this.SimpsonsText = SimpsonsText;
+    }
+
+    public JLabel getSupervision() {
+        return Supervision;
+    }
+
+    public void setSupervision(JLabel Supervision) {
+        this.Supervision = Supervision;
+    }
+
+    public JLabel getSupervision1() {
+        return Supervision1;
+    }
+
+    public void setSupervision1(JLabel Supervision1) {
+        this.Supervision1 = Supervision1;
+    }
+
+    public JLabel getUtilidades() {
+        return Utilidades;
+    }
+
+    public void setUtilidades(JLabel Utilidades) {
+        this.Utilidades = Utilidades;
+    }
+
+    public JLabel getUtilidades1() {
+        return Utilidades1;
+    }
+
+    public void setUtilidades1(JLabel Utilidades1) {
+        this.Utilidades1 = Utilidades1;
+    }
+
+    public JTextField getAnimator() {
+        return animator;
+    }
+
+    public void setAnimator(JTextField animator) {
+        this.animator = animator;
+    }
+
+    public JTextField getAnimator1() {
+        return animator1;
+    }
+
+    public void setAnimator1(JTextField animator1) {
+        this.animator1 = animator1;
+    }
+
+    public JLabel getAnimatorStorage() {
+        return animatorStorage;
+    }
+
+    public void setAnimatorStorage(JLabel animatorStorage) {
+        this.animatorStorage = animatorStorage;
+    }
+
+    public JLabel getAnimatorStorageStar() {
+        return animatorStorageStar;
+    }
+
+    public void setAnimatorStorageStar(JLabel animatorStorageStar) {
+        this.animatorStorageStar = animatorStorageStar;
+    }
+
+    public JTextField getAssemblers() {
+        return assemblers;
+    }
+
+    public void setAssemblers(JTextField assemblers) {
+        this.assemblers = assemblers;
+    }
+
+    public JTextField getAssemblers1() {
+        return assemblers1;
+    }
+
+    public void setAssemblers1(JTextField assemblers1) {
+        this.assemblers1 = assemblers1;
+    }
+
+    public JLabel getCosts() {
+        return costs;
+    }
+
+    public void setCosts(JLabel costs) {
+        this.costs = costs;
+    }
+
+    public JLabel getCostsStar() {
+        return costsStar;
+    }
+
+    public void setCostsStar(JLabel costsStar) {
+        this.costsStar = costsStar;
+    }
+
+    public JTextField getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(JTextField deadline) {
+        this.deadline = deadline;
+    }
+
+    public JTextField getDeadline1() {
+        return deadline1;
+    }
+
+    public void setDeadline1(JTextField deadline1) {
+        this.deadline1 = deadline1;
+    }
+
+    public JLabel getDeadlineCounter() {
+        return deadlineCounter;
+    }
+
+    public void setDeadlineCounter(JLabel deadlineCounter) {
+        this.deadlineCounter = deadlineCounter;
+    }
+
+    public JLabel getDeadlineCounterStar1() {
+        return deadlineCounterStar1;
+    }
+
+    public void setDeadlineCounterStar1(JLabel deadlineCounterStar1) {
+        this.deadlineCounterStar1 = deadlineCounterStar1;
+    }
+
+    public JLabel getDesignerStorage() {
+        return designerStorage;
+    }
+
+    public void setDesignerStorage(JLabel designerStorage) {
+        this.designerStorage = designerStorage;
+    }
+
+    public JLabel getDesignerStorageStar() {
+        return designerStorageStar;
+    }
+
+    public void setDesignerStorageStar(JLabel designerStorageStar) {
+        this.designerStorageStar = designerStorageStar;
+    }
+
+    public JLabel getDirectorStatus() {
+        return directorStatus;
+    }
+
+    public void setDirectorStatus(JLabel directorStatus) {
+        this.directorStatus = directorStatus;
+    }
+
+    public JLabel getDirectorStatusStar1() {
+        return directorStatusStar1;
+    }
+
+    public void setDirectorStatusStar1(JLabel directorStatusStar1) {
+        this.directorStatusStar1 = directorStatusStar1;
+    }
+
+    public JLabel getDubbingStorage() {
+        return dubbingStorage;
+    }
+
+    public void setDubbingStorage(JLabel dubbingStorage) {
+        this.dubbingStorage = dubbingStorage;
+    }
+
+    public JLabel getDubbingStorageStar() {
+        return dubbingStorageStar;
+    }
+
+    public void setDubbingStorageStar(JLabel dubbingStorageStar) {
+        this.dubbingStorageStar = dubbingStorageStar;
+    }
+
+    public JLabel getEarnings() {
+        return earnings;
+    }
+
+    public void setEarnings(JLabel earnings) {
+        this.earnings = earnings;
+    }
+
+    public JLabel getEarningsStar() {
+        return earningsStar;
+    }
+
+    public void setEarningsStar(JLabel earningsStar) {
+        this.earningsStar = earningsStar;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public void setjLabel13(JLabel jLabel13) {
+        this.jLabel13 = jLabel13;
+    }
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public void setjLabel14(JLabel jLabel14) {
+        this.jLabel14 = jLabel14;
+    }
+
+    public JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public void setjLabel15(JLabel jLabel15) {
+        this.jLabel15 = jLabel15;
+    }
+
+    public JLabel getjLabel16() {
+        return jLabel16;
+    }
+
+    public void setjLabel16(JLabel jLabel16) {
+        this.jLabel16 = jLabel16;
+    }
+
+    public JLabel getjLabel17() {
+        return jLabel17;
+    }
+
+    public void setjLabel17(JLabel jLabel17) {
+        this.jLabel17 = jLabel17;
+    }
+
+    public JLabel getjLabel18() {
+        return jLabel18;
+    }
+
+    public void setjLabel18(JLabel jLabel18) {
+        this.jLabel18 = jLabel18;
+    }
+
+    public JLabel getjLabel19() {
+        return jLabel19;
+    }
+
+    public void setjLabel19(JLabel jLabel19) {
+        this.jLabel19 = jLabel19;
+    }
+
+    public JLabel getjLabel20() {
+        return jLabel20;
+    }
+
+    public void setjLabel20(JLabel jLabel20) {
+        this.jLabel20 = jLabel20;
+    }
+
+    public JLabel getjLabel23() {
+        return jLabel23;
+    }
+
+    public void setjLabel23(JLabel jLabel23) {
+        this.jLabel23 = jLabel23;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JTabbedPane getjTabbedPane1() {
+        return jTabbedPane1;
+    }
+
+    public void setjTabbedPane1(JTabbedPane jTabbedPane1) {
+        this.jTabbedPane1 = jTabbedPane1;
+    }
+
+    public JLabel getPlotStorage() {
+        return plotStorage;
+    }
+
+    public void setPlotStorage(JLabel plotStorage) {
+        this.plotStorage = plotStorage;
+    }
+
+    public JLabel getPlotStorageStar() {
+        return plotStorageStar;
+    }
+
+    public void setPlotStorageStar(JLabel plotStorageStar) {
+        this.plotStorageStar = plotStorageStar;
+    }
+
+    public JTextField getPlotTwistScriptwriters() {
+        return plotTwistScriptwriters;
+    }
+
+    public void setPlotTwistScriptwriters(JTextField plotTwistScriptwriters) {
+        this.plotTwistScriptwriters = plotTwistScriptwriters;
+    }
+
+    public JTextField getPlotTwistScriptwriters1() {
+        return plotTwistScriptwriters1;
+    }
+
+    public void setPlotTwistScriptwriters1(JTextField plotTwistScriptwriters1) {
+        this.plotTwistScriptwriters1 = plotTwistScriptwriters1;
+    }
+
+    public JLabel getPlottwist() {
+        return plottwist;
+    }
+
+    public void setPlottwist(JLabel plottwist) {
+        this.plottwist = plottwist;
+    }
+
+    public JLabel getPlottwistStar1() {
+        return plottwistStar1;
+    }
+
+    public void setPlottwistStar1(JLabel plottwistStar1) {
+        this.plottwistStar1 = plottwistStar1;
+    }
+
+    public JLabel getProfit() {
+        return profit;
+    }
+
+    public void setProfit(JLabel profit) {
+        this.profit = profit;
+    }
+
+    public JLabel getProfitStar() {
+        return profitStar;
+    }
+
+    public void setProfitStar(JLabel profitStar) {
+        this.profitStar = profitStar;
+    }
+
+    public JLabel getProjectFaults() {
+        return projectFaults;
+    }
+
+    public void setProjectFaults(JLabel projectFaults) {
+        this.projectFaults = projectFaults;
+    }
+
+    public JLabel getProjectFaultsStar1() {
+        return projectFaultsStar1;
+    }
+
+    public void setProjectFaultsStar1(JLabel projectFaultsStar1) {
+        this.projectFaultsStar1 = projectFaultsStar1;
+    }
+
+    public JLabel getProjectManagerDeduction() {
+        return projectManagerDeduction;
+    }
+
+    public void setProjectManagerDeduction(JLabel projectManagerDeduction) {
+        this.projectManagerDeduction = projectManagerDeduction;
+    }
+
+    public JLabel getProjectManagerDeductionStar() {
+        return projectManagerDeductionStar;
+    }
+
+    public void setProjectManagerDeductionStar(JLabel projectManagerDeductionStar) {
+        this.projectManagerDeductionStar = projectManagerDeductionStar;
+    }
+
+    public JLabel getProjectManagerDeductionStar1() {
+        return projectManagerDeductionStar1;
+    }
+
+    public void setProjectManagerDeductionStar1(JLabel projectManagerDeductionStar1) {
+        this.projectManagerDeductionStar1 = projectManagerDeductionStar1;
+    }
+
+    public JLabel getProjectStatus() {
+        return projectStatus;
+    }
+
+    public void setProjectStatus(JLabel projectStatus) {
+        this.projectStatus = projectStatus;
+    }
+
+    public JLabel getProjectStatusStar1() {
+        return projectStatusStar1;
+    }
+
+    public void setProjectStatusStar1(JLabel projectStatusStar1) {
+        this.projectStatusStar1 = projectStatusStar1;
+    }
+
+    public JButton getSaveButton1() {
+        return saveButton1;
+    }
+
+    public void setSaveButton1(JButton saveButton1) {
+        this.saveButton1 = saveButton1;
+    }
+
+    public JButton getSaveButton2() {
+        return saveButton2;
+    }
+
+    public void setSaveButton2(JButton saveButton2) {
+        this.saveButton2 = saveButton2;
+    }
+
+    public JTextField getScreenwriters() {
+        return screenwriters;
+    }
+
+    public void setScreenwriters(JTextField screenwriters) {
+        this.screenwriters = screenwriters;
+    }
+
+    public JTextField getScreenwriters1() {
+        return screenwriters1;
+    }
+
+    public void setScreenwriters1(JTextField screenwriters1) {
+        this.screenwriters1 = screenwriters1;
+    }
+
+    public JTextField getSimulationDuration() {
+        return simulationDuration;
+    }
+
+    public void setSimulationDuration(JTextField simulationDuration) {
+        this.simulationDuration = simulationDuration;
+    }
+
+    public JTextField getSimulationDuration1() {
+        return simulationDuration1;
+    }
+
+    public void setSimulationDuration1(JTextField simulationDuration1) {
+        this.simulationDuration1 = simulationDuration1;
+    }
+
+    public JLabel getSpriptStorage() {
+        return spriptStorage;
+    }
+
+    public void setSpriptStorage(JLabel spriptStorage) {
+        this.spriptStorage = spriptStorage;
+    }
+
+    public JLabel getSpriptStorageStar() {
+        return spriptStorageStar;
+    }
+
+    public void setSpriptStorageStar(JLabel spriptStorageStar) {
+        this.spriptStorageStar = spriptStorageStar;
+    }
+
+    public JTextField getStageDesigner() {
+        return stageDesigner;
+    }
+
+    public void setStageDesigner(JTextField stageDesigner) {
+        this.stageDesigner = stageDesigner;
+    }
+
+    public JTextField getStageDesigner1() {
+        return stageDesigner1;
+    }
+
+    public void setStageDesigner1(JTextField stageDesigner1) {
+        this.stageDesigner1 = stageDesigner1;
+    }
+
+    public JLabel getStandard() {
+        return standard;
+    }
+
+    public void setStandard(JLabel standard) {
+        this.standard = standard;
+    }
+
+    public JLabel getStandardStar1() {
+        return standardStar1;
+    }
+
+    public void setStandardStar1(JLabel standardStar1) {
+        this.standardStar1 = standardStar1;
+    }
+
+    public JTextField getVoiceActors() {
+        return voiceActors;
+    }
+
+    public void setVoiceActors(JTextField voiceActors) {
+        this.voiceActors = voiceActors;
+    }
+
+    public JTextField getVoiceActors1() {
+        return voiceActors1;
+    }
+
+    public void setVoiceActors1(JTextField voiceActors1) {
+        this.voiceActors1 = voiceActors1;
+    }
 
     /**
      * @param args the command line arguments
@@ -597,7 +1520,6 @@ public class InterfaceView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Animaciones;
     private javax.swing.JLabel Animaciones1;
-    private javax.swing.JLabel Background;
     private javax.swing.JLabel Costos;
     private javax.swing.JLabel Costos1;
     private javax.swing.JLabel Descuento;
@@ -639,22 +1561,23 @@ public class InterfaceView extends javax.swing.JFrame {
     private javax.swing.JTextField animator;
     private javax.swing.JTextField animator1;
     private javax.swing.JLabel animatorStorage;
-    private javax.swing.JLabel animatorStorage1;
+    private javax.swing.JLabel animatorStorageStar;
     private javax.swing.JTextField assemblers;
     private javax.swing.JTextField assemblers1;
     private javax.swing.JLabel costs;
+    private javax.swing.JLabel costsStar;
     private javax.swing.JTextField deadline;
     private javax.swing.JTextField deadline1;
-    private javax.swing.JLabel deadlineCounterStar;
+    private javax.swing.JLabel deadlineCounter;
     private javax.swing.JLabel deadlineCounterStar1;
     private javax.swing.JLabel designerStorage;
-    private javax.swing.JLabel designerStorage1;
-    private javax.swing.JLabel directorStatusStar;
+    private javax.swing.JLabel designerStorageStar;
+    private javax.swing.JLabel directorStatus;
     private javax.swing.JLabel directorStatusStar1;
     private javax.swing.JLabel dubbingStorage;
-    private javax.swing.JLabel dubbingStorage1;
+    private javax.swing.JLabel dubbingStorageStar;
     private javax.swing.JLabel earnings;
-    private javax.swing.JLabel earnings1;
+    private javax.swing.JLabel earningsStar;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -678,18 +1601,19 @@ public class InterfaceView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel plotStorage;
-    private javax.swing.JLabel plotStorage1;
+    private javax.swing.JLabel plotStorageStar;
     private javax.swing.JTextField plotTwistScriptwriters;
     private javax.swing.JTextField plotTwistScriptwriters1;
-    private javax.swing.JLabel plottwistStar;
+    private javax.swing.JLabel plottwist;
     private javax.swing.JLabel plottwistStar1;
     private javax.swing.JLabel profit;
-    private javax.swing.JLabel profit1;
-    private javax.swing.JLabel projectFaultsStar;
+    private javax.swing.JLabel profitStar;
+    private javax.swing.JLabel projectFaults;
     private javax.swing.JLabel projectFaultsStar1;
+    private javax.swing.JLabel projectManagerDeduction;
     private javax.swing.JLabel projectManagerDeductionStar;
     private javax.swing.JLabel projectManagerDeductionStar1;
-    private javax.swing.JLabel projectStatusStar;
+    private javax.swing.JLabel projectStatus;
     private javax.swing.JLabel projectStatusStar1;
     private javax.swing.JButton saveButton1;
     private javax.swing.JButton saveButton2;
@@ -698,10 +1622,10 @@ public class InterfaceView extends javax.swing.JFrame {
     private javax.swing.JTextField simulationDuration;
     private javax.swing.JTextField simulationDuration1;
     private javax.swing.JLabel spriptStorage;
-    private javax.swing.JLabel spriptStorage1;
+    private javax.swing.JLabel spriptStorageStar;
     private javax.swing.JTextField stageDesigner;
     private javax.swing.JTextField stageDesigner1;
-    private javax.swing.JLabel standardStar;
+    private javax.swing.JLabel standard;
     private javax.swing.JLabel standardStar1;
     private javax.swing.JTextField voiceActors;
     private javax.swing.JTextField voiceActors1;
