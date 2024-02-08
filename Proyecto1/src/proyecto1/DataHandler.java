@@ -27,7 +27,7 @@ public class DataHandler {
         String line;
         String csvText = "";
         try {
-            reader = new BufferedReader(new FileReader(new File("test/initialData.csv")));
+            reader = new BufferedReader(new FileReader(new File("test/init.csv")));
             while ((line = reader.readLine()) != null) {
                 if (!line.isEmpty()) {
                     csvText += line + "\n";
@@ -54,7 +54,7 @@ public class DataHandler {
 
     public void WriteText(InitialData newDataNick, InitialData newDataStar) {
         try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter("test/simulationData.csv"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("test/init.csv"));
             PrintWriter wr = new PrintWriter(bw);
             wr.append("secondsDuration, daysDeadline, screenwriters, stageDesigners, animators, voiceActors, plotTwistScriptwriters, assemblers\n");
 
