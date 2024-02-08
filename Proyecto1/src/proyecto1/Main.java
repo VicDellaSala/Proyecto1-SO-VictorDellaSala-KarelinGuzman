@@ -48,7 +48,6 @@ public class Main {
     public static void main(String[] args) {
         Nickelodeon.start();
         StarChannel.start();
-        int counter = 1;
 
         while (true) {
             interfaceView.getCosts().setText(String.valueOf(Nickelodeon.getSalaryAccount()));
